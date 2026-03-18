@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 export default function Projects({ darkMode }) {
   const [showAll, setShowAll] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -99,6 +100,7 @@ export default function Projects({ darkMode }) {
               whileInView="visible"
               viewport={{ once: false }}
               whileHover={{ y: -8 }}
+              onClick={() => setSelectedProject(selectedProject === project.id ? null : project.id)}
               className={`rounded-2xl overflow-hidden backdrop-blur-md border-2 transition-all duration-300 flex flex-col h-full relative group cursor-pointer ${
                 darkMode
                   ? "bg-slate-800/30 border-slate-700/50 hover:border-blue-600/40"
@@ -149,19 +151,21 @@ export default function Projects({ darkMode }) {
                 </div>
               </div>
 
-              {/* Project Image Overlay - Hidden by Default, Shows on Hover */}
+              {/* Project Image Overlay - Hidden by Default, Shows on Hover or Click */}
               <motion.div
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
+                animate={{ opacity: selectedProject === project.id ? 1 : 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="absolute inset-0 rounded-2xl overflow-hidden z-20"
               >
-                {/* Image with Smooth Zoom on Hover */}
+                {/* Image with Zoom In when Appears */}
                 <motion.img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover"
-                  whileHover={{ scale: 0.90 }}
+                  initial={{ scale: 1 }}
+                  animate={{ scale: selectedProject === project.id ? 0.9 : 1 }}
                   transition={{ duration: 0.4 }}
                 />
                 
