@@ -1,0 +1,42 @@
+{
+  "name": "ameliaakhila.github.oi",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "main": "src/main.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ameliaakhila/ameliaakhila.github.oi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ameliaakhila/ameliaakhila.github.oi/issues"
+  },
+  "homepage": "https://github.com/ameliaakhila/ameliaakhila.github.oi#readme",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "aos": "^2.3.4",
+    "autoprefixer": "^10.4.27",
+    "axios": "^1.13.6",
+    "framer-motion": "^12.36.0",
+    "lucide-react": "^0.577.0",
+    "next-themes": "^0.4.6",
+    "postcss": "^8.5.8",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.1",
+    "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.3",
+    "vite": "^4.4.9"
+  }
+}
