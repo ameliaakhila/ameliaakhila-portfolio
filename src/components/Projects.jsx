@@ -157,15 +157,17 @@ export default function Projects({ darkMode }) {
                 whileHover={{ opacity: 1 }}
                 animate={{ opacity: selectedProject === project.id ? 1 : 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="absolute inset-0 rounded-2xl overflow-hidden z-20"
+                className={`absolute inset-0 rounded-2xl overflow-hidden z-20 flex items-center justify-center ${
+                  selectedProject === project.id ? "bg-black/60 backdrop-blur-sm" : ""
+                }`}
               >
-                {/* Image with Zoom In when Appears */}
+                {/* Image - Full size when clicked */}
                 <motion.img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className={`${selectedProject === project.id ? "w-full h-full object-contain p-4" : "w-full h-full object-cover"}`}
                   initial={{ scale: 1 }}
-                  animate={{ scale: selectedProject === project.id ? 0.9 : 1 }}
+                  animate={{ scale: selectedProject === project.id ? 1.05 : 1 }}
                   transition={{ duration: 0.4 }}
                 />
                 
