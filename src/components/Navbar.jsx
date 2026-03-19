@@ -29,8 +29,12 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-40 lg:hidden pointer-events-auto"
-          onClick={() => setIsOpen(false)}
+          className="fixed inset-0 z-30 lg:hidden pointer-events-auto"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setIsOpen(false);
+            }
+          }}
         />
       )}
 
@@ -174,7 +178,10 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                     initial={{ opacity: 0, x: -20 }}
                     animate={isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                     transition={{ delay: idx * 0.08 }}
-                    onClick={() => handleNavClick(item.href)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleNavClick(item.href);
+                    }}
                     whileTap={{ scale: 0.95 }}
                     className={`padding-navbar w-full flex items-center gap-4 px-4 py-3 rounded-lg transition-all pointer-events-auto ${
                       darkMode 

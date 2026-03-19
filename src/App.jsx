@@ -10,8 +10,6 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Cursor from "./components/Cursor";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import "./index.css";
 
 function App() {
@@ -29,14 +27,6 @@ function App() {
       document.documentElement.classList.remove("dark");
     }
   }, [darkMode]);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 120,
-    });
-  }, []);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);

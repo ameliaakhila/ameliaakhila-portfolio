@@ -1,13 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown, Github, Linkedin, Mail, Code2 } from "lucide-react";
-import AOS from "aos";
-import { useEffect } from "react";
 
 export default function Hero({ darkMode }) {
-  useEffect(() => {
-    AOS.init({ duration: 500, once: true });
-  }, []);
-
   // Generate unique code untuk download CV
   const generateUniqueCode = () => {
     const timestamp = Date.now();

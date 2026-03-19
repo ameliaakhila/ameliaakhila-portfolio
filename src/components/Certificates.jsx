@@ -1,16 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { CERTIFICATES } from "../constants/data.jsx";
 import { ChevronDown, Award } from "lucide-react";
-import { useState, useEffect } from "react";
-import AOS from "aos";
+import { useState } from "react";
 
 export default function Certificates({ darkMode, setSelectedCert }) {
   const [showAll, setShowAll] = useState(false);
   const displayedCerts = showAll ? CERTIFICATES : CERTIFICATES.slice(0, 6);
-
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -118,6 +113,7 @@ export default function Certificates({ darkMode, setSelectedCert }) {
                     <img
                       src={cert.image}
                       alt={cert.title}
+                      loading="lazy"
                       className="w-full h-full object-cover"
                     />
                   ) : (

@@ -1,12 +1,7 @@
 import { motion } from "framer-motion";
 import { SKILLS } from "../constants/data.jsx";
-import AOS from "aos";
-import { useEffect } from "react";
 
 export default function Skills({ darkMode }) {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
 
   const getLevelColor = (level) => {
     switch (level) {
@@ -166,6 +161,7 @@ export default function Skills({ darkMode }) {
                       <img 
                         src={skill.image} 
                         alt={skill.name}
+                        loading="lazy"
                         className="w-full h-full object-contain p-2"
                       />
                     ) : (
@@ -199,10 +195,10 @@ export default function Skills({ darkMode }) {
         </div>
 
               {/* Proficiency Legend */}
-        <div className="grid m-20 grid-cols-3 gap-2 lg:gap-4 mt-10">
+        <div className="grid m-20 grid-cols-3 lg:gap-4 mt-10">
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2">
-                <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-500"></div>
+                <div className="w-3 h-3 sm:w-5 sm:h-5 rounded-full bg-emerald-500"></div>
                 <span
                   className={`text-xs sm:text-sm font-semibold ${
                     darkMode ? "text-gray-200" : "text-slate-800"
@@ -214,7 +210,7 @@ export default function Skills({ darkMode }) {
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2">
-                <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-blue-500"></div>
+                <div className="w-3 h-3 sm:w-5 sm:h-5 rounded-full bg-blue-500"></div>
                 <span
                   className={`text-xs sm:text-sm font-semibold ${
                     darkMode ? "text-gray-200" : "text-slate-800"
@@ -226,7 +222,7 @@ export default function Skills({ darkMode }) {
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2">
-                <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-500"></div>
+                <div className="w-3 h-3 sm:w-5 sm:h-5 rounded-full bg-amber-500"></div>
                 <span
                   className={`text-xs sm:text-sm font-semibold ${
                     darkMode ? "text-gray-200" : "text-slate-800"

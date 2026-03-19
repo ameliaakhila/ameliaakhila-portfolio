@@ -1,13 +1,8 @@
 import { motion } from "framer-motion";
 import { CONTACT_INFO, SOCIAL_LINKS } from "../constants/data.jsx";
 import { Mail, Github, Instagram, Linkedin, Twitter } from "lucide-react";
-import { useEffect } from "react";
-import AOS from "aos";
 
 export default function Contact({ darkMode }) {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
 
   const getSocialIcon = (name) => {
     const icons = {
@@ -139,7 +134,7 @@ export default function Contact({ darkMode }) {
               </div>
             </motion.div>
 
-            <motion className="div">
+            <motion.div>
               Contact Me: <br />
             {/* Email Section */}
             <motion.a
@@ -152,7 +147,7 @@ export default function Contact({ darkMode }) {
                 >
                   {CONTACT_INFO.email}
             </motion.a>
-            </motion>
+            </motion.div>
 
           </motion.div>
         </div>

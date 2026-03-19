@@ -1,14 +1,10 @@
 import { motion } from "framer-motion";
 import { EXPERIENCES } from "../constants/data.jsx";
 import { Briefcase, Users, BookOpen, Award } from "lucide-react";
-import { useEffect, useState } from "react";
-import AOS from "aos";
+import { useState } from "react";
 
 export default function Experience({ darkMode }) {
   const [showAll, setShowAll] = useState(false);
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
 
   const getTypeIcon = (type) => {
     switch (type) {

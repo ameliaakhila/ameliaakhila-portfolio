@@ -1,16 +1,11 @@
 import { motion } from "framer-motion";
 import { PROJECTS } from "../constants/data.jsx";
 import { Github, ExternalLink } from "lucide-react";
-import AOS from "aos";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Projects({ darkMode }) {
   const [showAll, setShowAll] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
-
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -165,6 +160,7 @@ export default function Projects({ darkMode }) {
                 <motion.img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
                   className={`${selectedProject === project.id ? "w-full h-full object-contain p-4" : "w-full h-full object-cover"}`}
                   initial={{ scale: 1 }}
                   animate={{ scale: selectedProject === project.id ? 1.05 : 1 }}

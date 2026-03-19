@@ -26,18 +26,29 @@ export default function Cursor({ darkMode = true }) {
 
     const handleHoverLeave = () => setIsHoveringLink(false);
 
-    window.addEventListener("mousemove", handleMouseMove);
+    // Throttle mousemove to improve performance
+    let throttleTimer;
+    const throttledMouseMove = (e) => {
+      if (throttleTimer) return;
+      handleMouseMove(e);
+      throttleTimer = setTimeout(() => {
+        throttleTimer = null;
+      }, 16); // ~60fps
+    };
+
+    window.addEventListener("mousemove", throttledMouseMove, { passive: true });
     window.addEventListener("mousedown", handleMouseDown);
     window.addEventListener("mouseup", handleMouseUp);
-    document.addEventListener("mouseover", handleHoverEnter);
+    document.addEventListener("mouseover", handleHoverEnter, { passive: true });
     document.addEventListener("mouseleave", handleHoverLeave);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", throttledMouseMove);
       window.removeEventListener("mousedown", handleMouseDown);
       window.removeEventListener("mouseup", handleMouseUp);
       document.removeEventListener("mouseover", handleHoverEnter);
       document.removeEventListener("mouseleave", handleHoverLeave);
+      if (throttleTimer) clearTimeout(throttleTimer);
     };
   }, []);
 
