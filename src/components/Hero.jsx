@@ -69,7 +69,7 @@ export default function Hero({ darkMode }) {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className={`padding-badge inline-flex items-center gap-2 rounded-full backdrop-blur border w-fit text-xs sm:text-sm font-bold ${
+              className={`padding-badge my-3 inline-flex items-center gap-2 rounded-full backdrop-blur border w-fit text-xs sm:text-sm font-bold ${
                 darkMode
                   ? "bg-blue-500/15 border-blue-500/40 text-blue-300 shadow-lg shadow-blue-500/10"
                   : "bg-blue-100/70 border-blue-300/60 text-blue-700 shadow-lg shadow-blue-300/20"

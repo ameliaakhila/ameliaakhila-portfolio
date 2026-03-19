@@ -101,7 +101,7 @@ function App() {
                     <img
                       src={selectedCert.image}
                       alt={selectedCert.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-fill"
                     />
                   ) : (
                     <Award className="w-24 h-24 text-purple-400/50" />
