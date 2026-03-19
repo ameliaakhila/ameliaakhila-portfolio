@@ -16,9 +16,30 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
   ];
 
   const handleNavClick = (href) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false);
+    // Close menu dengan delay untuk memastikan smooth scroll berjalan
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 50);
+
+    // Tunggu sedikit untuk memastikan DOM siap
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      
+      if (element) {
+        // Gunakan scrollIntoView dengan block: "start" untuk konsistensi
+        element.scrollIntoView({ 
+          behavior: "smooth", 
+          block: "start" 
+        });
+        
+        // Add hash ke URL untuk bookmarking & refresh
+        window.history.pushState(null, null, href);
+      } else {
+        // Fallback jika element tidak ditemukan gunakan window.location.hash
+        console.warn(`Element "${href}" not found, using hash fallback`);
+        window.location.hash = href;
+      }
+    }, 100);
   };
 
   return (
