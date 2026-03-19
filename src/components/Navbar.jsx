@@ -29,7 +29,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-40 lg:hidden"
+          className="fixed inset-0 z-40 lg:hidden pointer-events-auto"
           onClick={() => setIsOpen(false)}
         />
       )}
@@ -161,7 +161,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
               height: isOpen ? "auto" : 0,
             }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="lg:hidden overflow-hidden mt-3"
+            className="lg:hidden overflow-hidden mt-3 pointer-events-auto"
           >
             <div className={`border-t ${
               darkMode ? "border-blue-500/30" : "border-blue-400/40"
@@ -176,7 +176,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                     transition={{ delay: idx * 0.08 }}
                     onClick={() => handleNavClick(item.href)}
                     whileTap={{ scale: 0.95 }}
-                    className={`padding-navbar w-full flex items-center gap-4 px-4 py-3 rounded-lg transition-all ${
+                    className={`padding-navbar w-full flex items-center gap-4 px-4 py-3 rounded-lg transition-all pointer-events-auto ${
                       darkMode 
                         ? "text-gray-200 hover:bg-blue-600/25 hover:text-blue-300" 
                         : "text-gray-700 hover:bg-blue-500/15 hover:text-blue-600"
