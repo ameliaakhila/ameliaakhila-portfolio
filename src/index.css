@@ -280,7 +280,8 @@ button {
 .skills,
 .projects,
 .experience,
-.certificates, .contact {
+.certificates,
+.contact {
     padding: 6% 30px 30px;
 }
 
@@ -390,7 +391,9 @@ h3.skills,
 
     .hero,
     .skills,
-    .projects {
+    .projects,
+    .experience,
+    .certificates, .contact {
         padding-top: 25%;
     }
 
