@@ -39,6 +39,7 @@ export default function Skills({ darkMode }) {
     frontend: SKILLS.filter((s) => s.category === "frontend"),
     backend: SKILLS.filter((s) => s.category === "backend"),
     ai: SKILLS.filter((s) => s.category === "ai"),
+    tools: SKILLS.filter((s) => s.category === "tools"),
   };
 
   const containerVariants = {
@@ -137,7 +138,7 @@ export default function Skills({ darkMode }) {
                   darkMode ? "text-white" : "text-slate-950"
                 }`}
               >
-                {category === "ai" ? "AI Engineering & Other Tools" : `${category} Development`}
+                {category === "ai" ? "AI Engineering" : `${category} Development`}
               </h3>
 
               <motion.div
