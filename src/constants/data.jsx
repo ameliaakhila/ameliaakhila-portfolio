@@ -24,12 +24,6 @@ export const SKILLS = [
     category: "frontend",
     image: "image/php.png",
   },
-  {
-    name: "Laravel",
-    level: "advanced",
-    category: "frontend",
-    image: "image/laravel.png",
-  },
       {
     name: "React",
     level: "intermediate",
@@ -56,7 +50,13 @@ export const SKILLS = [
   },
 
   // Backend
-    {
+  {
+    name: "Laravel",
+    level: "advanced",
+    category: "backend",
+    image: "image/laravel.png",
+  },
+  {
     name: "Python",
     level: "advanced",
     category: "backend",
