@@ -87,7 +87,7 @@ export default function Projects({ darkMode }) {
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mx-auto w-full"
         >
-          {PROJECTS.slice(0, showAll ? PROJECTS.length : 3).map((project) => (
+          {PROJECTS.slice(0, showAll ? PROJECTS.length : 4).map((project) => (
             <div key={project.id} className="flex flex-col">
             <motion.div
               variants={itemVariants}

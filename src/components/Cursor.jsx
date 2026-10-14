@@ -5,8 +5,21 @@ export default function Cursor({ darkMode = true }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isClicking, setIsClicking] = useState(false);
   const [isHoveringLink, setIsHoveringLink] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Check if device is touch-capable or screen is small
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isSmallScreen = window.innerWidth < 768;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (isTouchDevice || isSmallScreen || prefersReducedMotion) {
+      setIsVisible(false);
+      return;
+    }
+
+    setIsVisible(true);
+
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -65,6 +78,8 @@ export default function Cursor({ darkMode = true }) {
   };
 
   const colors = darkMode ? darkModeColors : lightModeColors;
+
+  if (!isVisible) return null;
 
   return (
     <>

@@ -216,6 +216,7 @@ export const PROJECTS = [
     "scikit-learn",
   ],
   image: "image/project/project7.webp",
+  repo:"https://github.com/ameliaakhila/Skripsi-Apotek",
   demo: "https://skripsi-apotek-iyaf.vercel.app",
 },
   {
@@ -257,7 +258,8 @@ export const PROJECTS = [
     "Haversine Formula",
   ],
   image: "image/project/project9.webp",
-  repo: "https://github.com/shineistu86/CPS-CC26",
+  repo: "https://github.com/ameliaakhila/Capstone-Project-AI-engginer-2026",
+  demo: "https://capstone-project-ai-engginer-2026-eta.vercel.app/login",
 },
   {
     id: 4,
@@ -293,11 +295,28 @@ export const PROJECTS = [
       "CSS3"
     ],
     image: "image/project/project2.webp",
-    // repo: "https://github.com/ameliaakhila/consultacy-id",
     demo: "https://consultacy.my.id",
   },
+  // {
+  //   id: 6,
+  //   title: "Consultacy.id-v2",
+  //   description: "An academic consultation platform offering thesis guidance, journal publication support, and academic mentoring. Built with Laravel framework and modern frontend technologies.",
+  //   tech: [
+  //     "PHP 8.2+",
+  //     "Laravel 12",
+  //     "MySQL",
+  //     "Bootstrap 5.3",
+  //     "Vite",
+  //     "JavaScript",
+  //     "Axios",
+  //     "HTML5",
+  //     "CSS3"
+  //   ],
+  //   image: "image/project/project11.webp",
+  //   demo: "https://consultacy.my.id",
+  // },
   {
-    id: 6,
+    id: 7,
     title: "Mini Project MySkill Residence",
     description: "A modern real estate platform showcasing residential properties with company information, facility gallery, and contact services. Built with responsive design and interactive animations for enhanced user experience.",
     tech: [
@@ -314,7 +333,7 @@ export const PROJECTS = [
     demo: "https://mini-project-delta-weld.vercel.app",
   },
   {
-    id: 7,
+    id: 8,
     title: "KNN Machine Learning Classification System",
     description: "Interactive educational platform for K-Nearest Neighbors algorithm with variable creation, data input, automated distance calculation, and real-time classification. Built with Laravel backend and Bootstrap frontend.",
     tech: [
@@ -331,7 +350,7 @@ export const PROJECTS = [
     // demo: "https://analytics.demo",
   },
   {
-    id: 8,
+    id: 9,
     title: "Apple Classification Machine Learning",
     description:
       "Machine learning application for apple fruit classification based on physical features. Automatically identifies apple varieties and quality using pre-trained models. Equipped with an interactive web interface for real-time apple data prediction and analysis.",
@@ -341,7 +360,7 @@ export const PROJECTS = [
     demo: "https://clasification-machine-learning-p8ypwt8y44ztuyttsurrny.streamlit.app",
   },
   {
-    id: 9,
+    id: 10,
   title: "House Price Prediction Dashboard & API",
   description:
     "Sistem machine learning untuk memprediksi harga rumah berdasarkan fitur properti, dilengkapi dashboard interaktif untuk analisis data dan interface API untuk integrasi aplikasi lain.",
@@ -355,7 +374,7 @@ export const PROJECTS = [
     "Plotly",
     "Joblib"
   ],
-      image: "image/project/project6.webp",
+    image: "image/project/project6.webp",
     repo: "https://github.com/ameliaakhila/latihan-membuat-api-flask-House-Prices-Advanced-Regression-Techniques-",
     demo: "https://house-prices-advanced-regression-techniques.streamlit.app",
   },
