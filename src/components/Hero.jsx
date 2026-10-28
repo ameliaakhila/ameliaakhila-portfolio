@@ -117,7 +117,7 @@ export default function Hero({ darkMode }) {
               className="flex flex-col sm:flex-row gap-5 md:gap-6 pt-8 sm:pt-6"
             >
               <motion.a
-                href="/cv/CV-Amelia-Akhila-Aqna.pdf"
+                href="/cv/cv-amelia-akhila-aqna.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
