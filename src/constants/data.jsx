@@ -352,6 +352,23 @@ export const PROJECTS = [
   //   demo: "https://consultacy.my.id",
   // },
   {
+  id: 3,
+  title: "Kuis Pintar Ceria",
+  description: "An interactive web-based educational game for children with diverse quiz categories, character-based guidance (Robo & Kity), and real-time scoring. Features include Web Audio API sound synthesis, mobile-first design, smooth CSS animations, and a custom particle confetti system.",
+  tech: [
+    "HTML5",
+    "JavaScript (Vanilla ES6+)",
+    "Tailwind CSS",
+    "Web Audio API",
+    "Web Audio Synthesis",
+    "Mobile-First Design",
+    "Responsive UI",
+    "Material Symbols",
+  ],
+  image: "image/project/project13.webp",
+  demo: "https://mini-game-sigma-one.vercel.app",
+},
+  {
     id: 7,
     title: "Mini Project MySkill Residence",
     description: "A modern real estate platform showcasing residential properties with company information, facility gallery, and contact services. Built with responsive design and interactive animations for enhanced user experience.",
