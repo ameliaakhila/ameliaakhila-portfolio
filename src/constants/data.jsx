@@ -204,6 +204,27 @@ export const SKILLS = [
 
 export const PROJECTS = [
 {
+  id: 2,
+  title: "Annez_Flo",
+  description: "A mobile-friendly rental platform for acrylic boards and event decorations in Serang, Banten. It includes event-based product catalogs, color filtering, product details, WhatsApp booking, delivery information, rental terms, and real-time availability synced with Google Sheets.",
+  tech: [
+    "Next.js",
+    "TypeScript",
+    "Google Sheets",
+    "Google Apps Script",
+    "JSON API",
+    "Incremental Data Revalidation",
+    "Cloudinary",
+    "WhatsApp Deep Linking",
+    "Material Symbols",
+    "Vercel",
+    "Responsive UI",
+  ],
+  image: "image/project/project10.webp",
+  repo: "https://github.com/ameliaakhila/annez_flowers",
+  demo: "https://annez-flowers.vercel.app",
+},
+{
   id: 1,
   title: "Sistem Informasi Persediaan Obat - Apotek Sena Farma",
   description: "A web-based pharmacy inventory management system for Apotek Sena Farma with multi-role access for admin, pharmacist, and manager. The system supports medicine master data, incoming and outgoing stock, branch stock mutation, batch and expiry monitoring, stock opname, reports, and stock demand prediction using a Decision Tree model.",
@@ -218,6 +239,23 @@ export const PROJECTS = [
   image: "image/project/project7.webp",
   repo:"https://github.com/ameliaakhila/Skripsi-Apotek",
   demo: "https://skripsi-apotek-iyaf.vercel.app",
+},
+  {
+  id: 8,
+  title: "Moomery",
+  description:
+    "A sophisticated e-commerce landing page for an artisanal bouquet and gift specialist. It features a dynamic product catalog with real-time category filtering, a responsive glassmorphism navigation system, and seamless WhatsApp ordering integration. Engineered with a focus on high-performance rendering and premium visual aesthetics using the latest frontend stack.",
+  tech: [
+    "Next.js",
+    "React 19",
+    "TypeScript",
+    "Tailwind CSS v4",
+    "React Icons",
+    "Turbopack",
+    "Vercel",
+  ],
+  image: "image/project/project12.webp",
+  demo: "https://moomery.vercel.app",
 },
   {
   id: 2,
@@ -237,7 +275,7 @@ export const PROJECTS = [
   ],
   image: "image/project/project8.webp",
   repo: "https://github.com/ameliaakhila/logikalia",
-  demo: "https://logikalia.vercel.app",
+  // demo: "https://logikalia.vercel.app",
 },
 {
   id: 3,
