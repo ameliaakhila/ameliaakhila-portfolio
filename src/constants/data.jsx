@@ -221,7 +221,6 @@ export const PROJECTS = [
     "Responsive UI",
   ],
   image: "image/project/project10.webp",
-  repo: "https://github.com/ameliaakhila/annez_flowers",
   demo: "https://annez-flowers.vercel.app",
 },
 {
@@ -275,7 +274,6 @@ export const PROJECTS = [
   ],
   image: "image/project/project8.webp",
   repo: "https://github.com/ameliaakhila/logikalia",
-  // demo: "https://logikalia.vercel.app",
 },
 {
   id: 3,
